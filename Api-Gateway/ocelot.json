@@ -1,0 +1,346 @@
+{
+  "Routes": [
+    //Teacher
+    //1. registration
+    {
+      "DownstreamPathTemplate": "/api/Home/register",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          // https://localhost:7159/api/register
+          "Host": "localhost",
+          "Port": 7159
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/teacher/register",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    //2. Login
+    {
+      "DownstreamPathTemplate": "/api/Home/token",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          //https://localhost:7159/api/Home/token
+          "Host": "localhost",
+          "Port": 7159
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/teacher/login",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    ////3. Getting list of teachers
+    //{
+    //  "DownstreamPathTemplate": "/api/Home/getallteachers",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      //https://localhost:7159/api/Home/getallteachers
+    //      "Host": "localhost",
+    //      "Port": 7159
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/gateway/teacher/getallteachers",
+    //  "UpstreamHttpMethod": [ "GET" ]
+    //},
+
+
+    ////4. GetById
+    //{
+    //  "DownstreamPathTemplate": "/api/Home/getbyid/{id}",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      //https://localhost:7159/api/Home/getbyid/{id}
+    //      "Host": "localhost",
+    //      "Port": 7159
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/gateway/Home/getbyid/{id}",
+    //  "UpstreamHttpMethod": [ "GET" ]
+    //},
+
+    ////5. Update teacher
+    //{
+    //  "DownstreamPathTemplate": "/api/Home/updateteacher",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      //https://localhost:7159/api/Home/updateteacher
+    //      "Host": "localhost",
+    //      "Port": 7159
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/gateway/teacher/updateteacher",
+    //  "UpstreamHttpMethod": [ "PUT" ]
+    //},
+
+    ////6. Delete Teacher
+    //{
+    //  "DownstreamPathTemplate": "/api/Home/delete/{id}",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      //https://localhost:7159/api/Home/updateteacher
+    //      "Host": "localhost",
+    //      "Port": 7159
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/gateway/teacher/delete/{id}",
+    //  "UpstreamHttpMethod": [ "DELETE" ]
+    //},
+
+
+
+
+
+
+
+
+    //User
+
+    //1. User Register
+    {
+      "DownstreamPathTemplate": "/api/UserControllers/Register",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          //https://localhost:7219/api/UserControllers/Register
+          "Host": "localhost",
+          "Port": 7219
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/user/register",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+
+    //2. Users list
+    {
+      "DownstreamPathTemplate": "/api/UserControllers/GetActiveByStd/{std}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          //https://localhost:7219/api/UserControllers/GetActiveByStd/{std}
+          "Host": "localhost",
+          "Port": 7219
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/user/getActiveStudents/{std}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    //3. Login User
+    {
+      "DownstreamPathTemplate": "/api/UserControllers/Login",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          //https://localhost:7219/api/UserControllers/Login
+          "Host": "localhost",
+          "Port": 7219
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/user/login",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    //4. Get user by Id
+    {
+      "DownstreamPathTemplate": "/api/UserControllers/GetById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          //https://localhost:7219/api/UserControllers/GetById/{id}
+          "Host": "localhost",
+          "Port": 7219
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/user/byid/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    //5. Update User
+    {
+      "DownstreamPathTemplate": "/api/UserControllers/UpdateUser",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          //https://localhost:7219/api/UserControllers/UpdateUser
+          "Host": "localhost",
+          "Port": 7219
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/user/update",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+
+
+    //6. Delete User
+    {
+      "DownstreamPathTemplate": "/api/UserControllers/Delete/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          //https://localhost:7219/api/UserControllers/Delete/{id}
+          "Host": "localhost",
+          "Port": 7219
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/user/delete/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+
+    //7. Activate User
+    {
+      "DownstreamPathTemplate": "/api/UserControllers/Activate/{name}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          //https://localhost:7219/api/UserControllers/Activate/{name}
+          "Host": "localhost",
+          "Port": 7219
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/user/activate/{name}",
+      "UpstreamHttpMethod": [ "PATCH" ]
+    },
+
+
+
+
+
+
+
+    //FileHandling
+    //1. AddPdf
+    {
+      "DownstreamPathTemplate": "/api/Pdf",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          //https://localhost:7030/api/Pdf
+          "Host": "localhost",
+          "Port": 7030
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/pdf/Add",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    //2. Delete Pdf
+    {
+      "DownstreamPathTemplate": "/api/Pdf/productPdf/delete/{pdfName}/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          //https://localhost:7030/api/Pdf/productPdf/delete/{pdfName}/{id}
+          "Host": "localhost",
+          "Port": 7030
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/pdf/delete/{pdfName}/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+
+
+    //3. Get By FileName
+    {
+      "DownstreamPathTemplate": "/api/Pdf/get/pdf/{fileName}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          //https://localhost:7030/api/Pdf/get/pdf/{fileName}
+          "Host": "localhost",
+          "Port": 7030
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/pdf/get/{fileName}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+
+    //4. Get All Pdfs
+    {
+      "DownstreamPathTemplate": "/api/Pdf/get/all/pdfs",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          //https://localhost:7030/api/Pdf/get/all/pdfs
+          "Host": "localhost",
+          "Port": 7030
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/pdf/getall",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+
+    //5. Get Pdfs by standard
+    {
+      "DownstreamPathTemplate": "/api/Pdf/Pdf/Standard/{std}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          //https://localhost:7030/api/Pdf/Pdf/Standard/{std}
+          "Host": "localhost",
+          "Port": 7030
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/pdf/getallbystd/{std}",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+
+    //6. Get All Publishable Pdfs
+    {
+      "DownstreamPathTemplate": "/api/Pdf/Pdf/Standard/Publishable/{std}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          //https://localhost:7030/api/Pdf/Pdf/Standard/Publishable/{std}
+          "Host": "localhost",
+          "Port": 7030
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/pdf/getPublishablesbystd/{std}",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+
+    //7. Get all deleted pdfs
+    {
+      "DownstreamPathTemplate": "/api/Pdf/Pdf/Standard/Deleted/{std}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          //https://localhost:7030/api/Pdf/Pdf/Standard/Deleted/{std}
+          "Host": "localhost",
+          "Port": 7030
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/pdf/getDeletedbystd/{std}",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+
+    //8. Publishing the document
+    {
+      "DownstreamPathTemplate": "/api/Pdf/Publish/{name}/{std}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          //https://localhost:7030/api/Pdf/Pdf/Standard/Deleted/{std}
+          "Host": "localhost",
+          "Port": 7030
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/pdf/Publish/{name}/{std}",
+      "UpstreamHttpMethod": [ "POST" ]
+    }
+
+
+  ]
+}

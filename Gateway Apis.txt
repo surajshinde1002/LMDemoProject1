@@ -1,0 +1,86 @@
+#HNavbar
+
+const url = `${UrlGateway}/gateway/teacher/register`; 
+
+const urlTeacher = `${UrlGateway}/gateway/teacher/login`;
+
+const url = `${UrlGateway}/gateway/user/login`;
+
+========================================================================
+
+# AddResource
+
+const url = `${UrlGateway}/gateway/pdf/Add`;
+
+============================================================================
+
+
+# Publishable
+
+const url = `${UrlGateway}/gateway/pdf/getPublishablesbystd/${classtd}`; 
+
+const urlResource = `${UrlGateway}/gateway/pdf/Publish/${pdf_Name}/${std}`;
+
+=============================================================================
+
+# Bin
+
+const url = `${UrlGateway}/gateway/pdf/getDeletedbystd/${classtd}`;
+
+
+const urlResource = `${UrlGateway}/gateway/pdf/Publish/${pdf_Name}/${std}`;
+
+
+================================================================================
+
+# Resourcelist
+
+const url = `${UrlGateway}/gateway/pdf/getallbystd/${classtd}`;
+
+const urlResource = `${UrlGateway}/gateway/pdf/delete/${pdf_Name}/${id}`;
+
+=======================================================================================
+
+
+# AddStudent
+
+const url = `${UrlGateway}/gateway/user/register`;
+
+========================================================================================
+
+# ViewStudent
+
+const url = `${UrlGateway}/gateway/user/getActiveStudents/${standard}`;
+
+const url = `${UrlGateway}/gateway/user/delete/${stud_id}`;
+
+const url = `${UrlGateway}/gateway/user/activate/${stud_id}`;
+
+
+==========================================================================================
+
+# User -> Profile
+
+const url = `${UrlGateway}/gateway/user/byid/${User_id}`;
+
+
+===========================================================================================
+
+#User -> UHome
+
+const urlResource = `${UrlGateway}/gateway/pdf/getallbystd/${standard}`;
+
+
+===========================================================================================
+
+
+
+
+
+
+
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/example_s3_Scenario_GettingStarted_section.html
+
+
+
+
